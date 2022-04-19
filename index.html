@@ -10,11 +10,20 @@
         body{
             margin: 0;
         }
+        *{
+            --primary-color: #5759DF !important;
+            --secondary-color: #AFAFDC !important
+        }
     </style>
 </head>
 <body>
     <fwc-popup ms="500000">
-        <div slot="text">Test</div>
+        <div slot="content">Test</div>
     </fwc-popup>
+    <fwc-button>
+        <div slot="content">Test</div>
+    </fwc-button>
+    <fwc-loading ms="5000">
+    </fwc-loading>
 </body>
 </html>

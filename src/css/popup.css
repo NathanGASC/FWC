@@ -1,5 +1,5 @@
 :host{
-    background-color: var(--primary-color);
+    background-color: var(---primary-color);
     position: absolute;
     bottom: 100%;
     width: 100%;
@@ -11,7 +11,7 @@
 }
 
 :host span,slot{
-    color: var(--text);
+    color: var(---text);
     margin: 10px;
     display: block;
 }

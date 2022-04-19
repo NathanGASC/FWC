@@ -20,7 +20,7 @@ Here an example :
 </head>
 <body>
     <fwc-popup ms="5000">
-        <div slot="text">Test</div>
+        <div slot="content">Test</div>
     </fwc-popup>
 </body>
 </html>
@@ -31,16 +31,16 @@ Here an example :
 For easy change in components, we have set some css variables. You will not be able to change anything by using them, but you will be able to do major changes
 ```css
 :host{
-    --primary-color: #e76f51;
-    --secondary-color: #e9c46a;
-    --text: white;
-    --font: Tahoma, sans-serif;
-    font-family: var(--font)
+    ---primary-color: var(--primary-color,#e76f51);
+    ---secondary-color: var(--secondary-color,#e9c46a);
+    ---text: var(--text, white);
+    ---font: var(--font, Tahoma, sans-serif);
+    font-family: var(--font);
 }
 ```
 If you want to change some of those variables, you can do like this:
 ```css
-body{
+*{
     --primary-color: black;
     --secondary-color: white;
 }
