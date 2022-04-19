@@ -1,0 +1,24 @@
+:host{
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(0%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+:host span,slot{
+    color: var(--text);
+    margin: 10px;
+    display: block;
+}
+
+:host fwc-loading{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    transform: translateY(-100%);
+}

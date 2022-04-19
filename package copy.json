@@ -1,0 +1,51 @@
+{
+  "_from": "@nathangasc/fwc",
+  "_id": "@nathangasc/fwc@1.1.3",
+  "_inBundle": false,
+  "_integrity": "sha512-xCJaFchpwNiI3DVIHn6NscDoXosmCthR6VOqp3zS7EOOUtHdBVk5l9jxsl9ZAarx8wd5OKSPSjMRQAdS65KbGA==",
+  "_location": "/@nathangasc/fwc",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@nathangasc/fwc",
+    "name": "@nathangasc/fwc",
+    "escapedName": "@nathangasc%2ffwc",
+    "scope": "@nathangasc",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@nathangasc/fwc/-/fwc-1.1.3.tgz",
+  "_shasum": "f9f6d19a23a9f5ef23fa7addfb7f8e691053ad2a",
+  "_spec": "@nathangasc/fwc",
+  "_where": "C:\\Users\\nathangasc\\Desktop\\projects\\customWebComponent",
+  "author": {
+    "name": "Nathan GASC"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@types/node": "^17.0.23",
+    "browserify": "^17.0.0",
+    "del": "^6.0.0",
+    "imgurify": "^2.0.1",
+    "partialify": "^3.1.6",
+    "recursive-copy": "^2.0.14"
+  },
+  "deprecated": false,
+  "description": "",
+  "license": "ISC",
+  "main": "./dist/index.js",
+  "name": "@nathangasc/fwc",
+  "scripts": {
+    "build": "npm run build:ops:before && tsc && npm run build:ops:es6 && npm run build:ops:after",
+    "build:ops:after": "node ./ops/after.js",
+    "build:ops:before": "node ./ops/before.js",
+    "build:ops:es6": "cd ./dist/ && node ../ops/es6.js -i index.js -h html,css"
+  },
+  "version": "1.1.3"
+}

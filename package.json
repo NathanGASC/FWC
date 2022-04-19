@@ -1,0 +1,24 @@
+{
+  "name": "custom-web-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:ops:before && tsc && npm run build:browserify && npm run build:ops:after",
+    "build:ops:after": "node ./ops/after.js",
+    "build:ops:before": "node ./ops/before.js",
+    "build:browserify": "browserify ./dist/index.js -t [ partialify --alsoAllow html --alsoAllow css --alsoAllow txt --alsoAllow md ] -t imgurify -o ./dist/index.js",
+    "build:watch": "nodemon -e ts,html,css,png,jpeg,jpg,js,json,md --ignore ./dist/ --exec \"npm run build\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^17.0.23",
+    "browserify": "^17.0.0",
+    "del": "^6.0.0",
+    "imgurify": "^2.0.1",
+    "nodemon": "^2.0.15",
+    "partialify": "^3.1.6",
+    "recursive-copy": "^2.0.14"
+  }
+}

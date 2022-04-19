@@ -1,0 +1,28 @@
+:host {
+    display: block;
+    width: fit-content;
+    margin: 10px;
+}
+
+:host button{
+    background: none;
+	border: none;
+	font: inherit;
+	outline: inherit;
+
+    padding: 10px 20px 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text);
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+:host button:hover:not([disabled]){
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
+	cursor: pointer;
+}
+
+:host button:disabled{
+    filter: brightness(0.8);
+}

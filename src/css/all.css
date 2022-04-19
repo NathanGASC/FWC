@@ -1,0 +1,7 @@
+:host{
+    --primary-color: #e76f51;
+    --secondary-color: #e9c46a;
+    --text: white;
+    --font: Tahoma, sans-serif;
+    font-family: var(--font)
+}
