@@ -30,7 +30,7 @@ export class Component<T> extends HTMLElement {
     template?: string;
     css?: string;
 
-    static log: boolean = false;
+    static log: boolean = true;
 
     static id = "component";
 
@@ -107,7 +107,7 @@ export class Component<T> extends HTMLElement {
      */
     attributeChangedCallback(name: T, oldValue: string, newValue: string): void | Promise<void> {
         if (!this.isConnected) return;
-        if (Component.log) console.log(this.constructor.name + " : call onDataUpdate(", name, ",", oldValue, ",", newValue)
+        if (Component.log) console.log(this.constructor.name + " : call onDataUpdate(", name, ",", oldValue, ",", newValue+" )")
         this._this.onDataUpdate(name, oldValue, newValue)
     }
 

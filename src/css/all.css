@@ -1,6 +1,7 @@
 :host{
     ---primary-color: var(--primary-color,#e76f51);
     ---secondary-color: var(--secondary-color,#e9c46a);
+    ---error-color: var(--error-color,#C23939);
     ---text: var(--text, white);
     ---font: var(--font, Tahoma, sans-serif);
     font-family: var(--font)
